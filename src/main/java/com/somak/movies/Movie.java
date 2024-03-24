@@ -27,7 +27,7 @@ public class Movie {
     @DocumentReference
     private List<Review> reviews;
 
-    public Movie(String imdbId, String title, String releaseDate, String trailerLink, String poster, List<String> backdrops, List<String> genres, List<Review> reviews) {
+    public Movie(String imdbId, String title, String releaseDate, String trailerLink, String poster, List<String> backdrops, List<String> genres, ) {
         this.imdbId = imdbId;
         this.title = title;
         this.releaseDate = releaseDate;
@@ -35,6 +35,5 @@ public class Movie {
         this.poster = poster;
         this.backdrops = backdrops;
         this.genres = genres;
-        this.reviews = reviews;
     }
 }
