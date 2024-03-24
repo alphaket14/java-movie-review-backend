@@ -12,13 +12,12 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor @NoArgsConstructor
 public class Review {
-    private String imdbid;
+    private ObjectId id;
     private String body;
     private LocalDateTime created;
     private LocalDateTime updated;
 
-    public Review(String imdbid, String body, LocalDateTime created, LocalDateTime updated) {
-        this.imdbid = imdbid;
+    public Review(String body, LocalDateTime created, LocalDateTime updated) {
         this.body = body;
         this.created = created;
         this.updated = updated;
