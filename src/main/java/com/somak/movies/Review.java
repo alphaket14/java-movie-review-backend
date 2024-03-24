@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor @NoArgsConstructor
 public class Review {
-    private ObjectId imdbid;
+    private String imdbid;
     private String body;
     private LocalDateTime created;
     private LocalDateTime updated;
