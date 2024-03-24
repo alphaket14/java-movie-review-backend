@@ -24,6 +24,10 @@ public class ReviewService {
             .matching(Criteria.where("imdbId").is(imdbId))
                 .apply(new Update().push("reviewIds").value(review.getId()))
                 .first();
+        mongoTemplate.update(Movie.class)
+            .matching(Criteria.where("imdbId").is(imdbId))
+                .apply(new Update().push("reviews").value(review.reviewBody))
+                .first();
         return review;
     }
 }
